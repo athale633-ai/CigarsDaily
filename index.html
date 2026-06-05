@@ -1129,7 +1129,7 @@ async function addCigar() {
       document.getElementById('modal').classList.add('open');
       return;
     }
-    await sbPost('cigars', { id, brand, name, vitola, origin });
+    await sbPost('cigars', { id, brand, name, vitola, origin, msrp });
     ['new-brand','new-name','new-vitola','new-origin'].forEach(f => document.getElementById(f).value = '');
     document.getElementById('modal-title').textContent = 'Cigar Added!';
     document.getElementById('modal-msg').textContent   = `${brand} ${name} is now in the shared database — anyone in the world can review it!`;
